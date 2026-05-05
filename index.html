@@ -3,136 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaOS Stealth Pro | Elite Security</title>
+    <title>NovaOS Safe Pro</title>
+    <!-- El yazısı fontu için Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #00FF00;
-            --bg: #06090f;
-            --card-bg: #0d1117;
-        }
-        body {
-            background-color: var(--bg);
-            color: #c9d1d9;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        header {
-            width: 100%;
-            padding: 80px 0;
-            text-align: center;
-            background: radial-gradient(circle, #161b22 0%, #06090f 100%);
-            border-bottom: 3px solid var(--primary);
-            box-shadow: 0 10px 30px rgba(0, 255, 0, 0.1);
-        }
-        .patent-badge {
-            background: rgba(0, 255, 0, 0.1);
-            border: 1px solid var(--primary);
-            color: var(--primary);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-        h1 { 
-            color: var(--primary); 
-            font-size: 3.5rem; 
+        :root { --primary: #00FF00; --bg: #06090f; }
+        body { 
+            background-color: var(--bg); 
+            color: #e6edf3; 
+            font-family: 'Segoe UI', sans-serif; 
             margin: 0; 
-            letter-spacing: 4px; 
-            text-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+            text-align: center; 
         }
-        .download-container { margin: 50px 0; }
+        
+        header { 
+            padding: 80px 20px; 
+            background: radial-gradient(circle, #161b22, #06090f);
+            border-bottom: 2px solid var(--primary);
+        }
+
+        /* El Yazısı Başlık */
+        .handwritten-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+            margin: 20px 0;
+        }
+
+        .patent-label {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: 5px 25px;
+            border-radius: 50px;
+            display: inline-block;
+        }
+
         .btn-download {
-            background: linear-gradient(45deg, #238636, #2ea043);
+            background: #238636;
             color: white;
             padding: 20px 60px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 1.5rem;
-            transition: all 0.4s ease;
-            box-shadow: 0 5px 20px rgba(46, 160, 67, 0.4);
-            border: 2px solid transparent;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin: 40px 0;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(35, 134, 54, 0.4);
         }
-        .btn-download:hover { 
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 30px rgba(46, 160, 67, 0.6);
-            border-color: var(--primary);
+        .btn-download:hover { transform: scale(1.05); background: #2ea043; }
+
+        /* Alt Seçenekler Alanı */
+        .features-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px 20px;
+            flex-wrap: wrap;
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1000px;
-            padding: 40px 20px;
-        }
-        .card {
-            background: var(--card-bg);
+
+        .feature-card {
+            background: #0d1117;
+            border: 1px solid #30363d;
             padding: 30px;
             border-radius: 20px;
-            border: 1px solid #30363d;
+            width: 280px;
             transition: 0.3s;
-            position: relative;
-            overflow: hidden;
         }
-        .card:hover {
-            border-color: var(--primary);
-            transform: translateY(-10px);
-            background: #161c22;
+        .feature-card:hover { border-color: var(--primary); transform: translateY(-10px); }
+
+        /* Kartlardaki El Yazısı Detayları */
+        .feature-card h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
         }
-        .card h3 { color: var(--primary); margin-top: 0; }
-        .warning-box {
-            background: rgba(255, 69, 0, 0.1);
-            border-left: 5px solid #ff4500;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            max-width: 800px;
+
+        .warning-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #ff4b4b;
+            margin: 40px 0;
         }
-        footer { margin: 60px; color: #8b949e; font-size: 0.9rem; letter-spacing: 1px; }
+
+        footer { padding: 40px; color: #8b949e; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="patent-badge">📜 NOVA PATENTED TECHNOLOGY v4.0</div>
-    <h1>NOVA SECURITY PRO</h1>
-    <p style="font-size: 1.2rem; color: #8b949e;">MSI Katana GF66 Serisi İçin Özel Optimize Edilmiştir</p>
+    <div class="patent-label">Official Patent Security</div>
+    <!-- İstediğin Büyük El Yazısı Bölümü -->
+    <div class="handwritten-title">NovaOSSafe</div>
+    <p style="letter-spacing: 2px;">MSI Katana GF66 Stealth Module</p>
     
-    <div class="download-container">
-        <!-- DOĞRUDAN VE GÜVENLİ LİNK -->
-        <a href="https://github.com/teyekyusuf40-pixel/NovaStealth/raw/main/NovaOS_Stealth.pyw" class="btn-download">
-            YAZILIMI İNDİR
-        </a>
-    </div>
+    <!-- İndirme butonundaki 3. taraf engelini aşan yapı -->
+    <a href="https://github.com/teyekyusuf40-pixel/NovaStealth/raw/main/NovaOS_Stealth.pyw" 
+       class="btn-download" download>
+        Yazılımı Güvenli İndir
+    </a>
 </header>
 
-<div class="grid">
-    <div class="card">
-        <h3>🌍 Küresel Maskeleme</h3>
-        <p>Seçilebilir 10 farklı lokasyon ile gerçek IP adresinizi sistem çekirdeğinden gizleyin.</p>
+<div class="features-grid">
+    <div class="feature-card">
+        <h3>IP Maskeleme</h3>
+        <p>10 farklı lokasyon ile sistem kimliğinizi tamamen gizleyin.</p>
     </div>
-    <div class="card">
-        <h3>🛡️ Stealth Guard</h3>
-        <p>Gelişmiş güvenlik duvarı protokolleri ile dış dünyadan gelen tüm sızıntıları mühürleyin.</p>
+    <div class="feature-card">
+        <h3>Firewall Elite</h3>
+        <p>Dışarıdan gelen veri sızıntılarını anında mühürleyin.</p>
     </div>
-    <div class="card">
-        <h3>⚡ Gaming Mode</h3>
-        <p>Valorant ve CS2 için tek tıkla ağ onarımı. 0 gecikme ve maksimum FPS odaklı tasarım.</p>
+    <div class="feature-card">
+        <h3>Oyun Modu</h3>
+        <p>Valorant için tek tıkla ağ protokolü onarımı.</p>
     </div>
 </div>
 
-<div class="warning-box">
-    <strong>⚠️ KRİTİK UYARI:</strong> Rekabetçi bir maça girmeden önce yazılım içinden "SİSTEMİ TAM ONAR" butonuna basarak orijinal ağ ayarlarınıza dönmeniz, en düşük ping değerini almanızı sağlar.
+<div class="warning-text">
+    "Huzurlu bir oyun için sistemini her zaman temiz tut..."
 </div>
 
 <footer>
-    © 2026 NovaOS Systems - Yusuf tarafından geliştirilmiştir.
+    © 2026 NovaOS Systems - Developed by Yusuf
 </footer>
 
 </body>
