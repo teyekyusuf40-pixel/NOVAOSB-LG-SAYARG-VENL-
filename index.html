@@ -2,20 +2,18 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>NovaOS Safe Elite</title>
-    <!-- El yazısı için fontlar -->
+    <title>NovaOS Safe Elite | Setup Guide</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #00FF00; --bg: #06090f; }
+        :root { --primary: #00FF00; --bg: #06090f; --warn: #ffcc00; }
         body { background-color: var(--bg); color: #e6edf3; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
         
         header { 
-            padding: 60px 20px; 
+            padding: 50px 20px; 
             background: radial-gradient(circle, #161b22, #06090f);
             border-bottom: 2px solid var(--primary);
         }
 
-        /* İstediğin Büyük El Yazısı Başlık */
         .nova-safe-title {
             font-family: 'Great Vibes', cursive;
             font-size: 6rem;
@@ -24,95 +22,78 @@
             margin: 10px 0;
         }
 
-        .patent-badge {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.4rem;
-            color: var(--primary);
-            border: 1px solid var(--primary);
-            padding: 5px 30px;
-            border-radius: 50px;
-            display: inline-block;
-        }
-
-        /* İNDİRME BUTONU */
         .btn-download {
             background: linear-gradient(45deg, #238636, #2ea043);
-            color: white;
-            padding: 22px 70px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.4rem;
-            display: inline-block;
-            margin: 40px 0;
-            transition: 0.3s;
-            border: none;
-            cursor: pointer;
+            color: white; padding: 20px 60px; text-decoration: none;
+            border-radius: 50px; font-weight: bold; font-size: 1.4rem;
+            display: inline-block; margin: 30px 0; transition: 0.3s;
         }
         .btn-download:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(46, 160, 67, 0.6); }
 
-        /* ALT SEÇENEKLER */
-        .options-container {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            padding: 40px 20px;
-            flex-wrap: wrap;
-        }
-
-        .option-card {
-            background: #0d1117;
+        /* KURULUM VE UYARI PANELİ */
+        .guide-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #161b22;
             border: 1px solid #30363d;
-            padding: 25px;
             border-radius: 20px;
-            width: 260px;
-            transition: 0.3s;
+            padding: 30px;
+            text-align: left;
         }
-        .option-card:hover { border-color: var(--primary); transform: translateY(-10px); }
 
-        .option-card h3 {
+        .guide-title {
             font-family: 'Dancing Script', cursive;
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 10px;
+            font-size: 2.5rem;
+            color: var(--warn);
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--warn);
+            display: inline-block;
         }
 
-        footer { padding: 30px; color: #8b949e; font-size: 0.9rem; }
+        .step { margin-bottom: 15px; line-height: 1.6; }
+        .step b { color: var(--primary); }
+
+        .critical-alert {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff4b4b;
+            padding: 15px;
+            border-radius: 10px;
+            color: #ff4b4b;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        footer { padding: 40px; color: #8b949e; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="patent-badge">🛡️ Nova Patented Security</div>
-    <!-- Büyük El Yazısı Bölümü -->
     <div class="nova-safe-title">NovaOSSafe</div>
-    <p style="letter-spacing: 3px; font-weight: bold; color: #8b949e;">MSI KATANA GF66 ELITE MODULE</p>
+    <p>MSI Katana GF66 Stealth Module</p>
     
-    <!-- İndirmeyi zorunlu kılan link yapısı -->
     <a href="https://raw.githubusercontent.com/teyekyusuf40-pixel/NovaStealth/main/NovaOS_Stealth.pyw" 
        download="NovaOS_Stealth.pyw" 
        class="btn-download">
-        HAYALET MODUNU İNDİR
+        DOSYAYI İNDİR
     </a>
 </header>
 
-<div class="options-container">
-    <div class="option-card">
-        <h3>IP Mühürleme</h3>
-        <p>Dünya çapında 10+ lokasyon ile izini kaybet.</p>
-    </div>
-    <div class="option-card">
-        <h3>Firewall Plus</h3>
-        <p>Sistem portlarını dış dünyaya tamamen kapat.</p>
-    </div>
-    <div class="option-card">
-        <h3>Hızlı Onarım</h3>
-        <p>Valorant pingini düşürmek için ağ ayarlarını sıfırla.</p>
+<div class="guide-container">
+    <div class="guide-title">Nasıl Kullanılır?</div>
+    
+    <div class="step">1️⃣ <b>Python Yükleyin:</b> Bilgisayarınızda Python yüklü olmalıdır. Eğer yoksa python.org üzerinden indirin.</div>
+    <div class="step">2️⃣ <b>Kütüphane Kurulumu:</b> CMD'yi açın ve şu komutu yazın: <code>pip install customtkinter</code></div>
+    <div class="step">3️⃣ <b>Çalıştırma:</b> İndirdiğiniz <code>NovaOS_Stealth.pyw</code> dosyasına çift tıklayın. Siyah ekran açılmadan doğrudan arayüz gelecektir.</div>
+    <div class="step">4️⃣ <b>Yönetici İzni:</b> Yazılım sistem ayarlarını (IP/DNS) değiştirdiği için açılışta çıkan "Yönetici olarak çalıştır" uyarısına "Evet" deyin.</div>
+
+    <div class="critical-alert">
+        ⚠️ ÖNEMLİ: Eğer indirince kod sayfası açılırsa; indirme butonuna SAĞ TIKLAYIP "Bağlantıyı Farklı Kaydet" diyerek masaüstüne indirin!
     </div>
 </div>
 
 <footer>
-    © 2026 NovaOS Systems - Yusuf Projesi
+    NovaOS Systems - © 2026 Yusuf
 </footer>
 
 </body>
